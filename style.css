@@ -324,13 +324,6 @@ a {
 	margin: 1em;
 }
 
-@media only screen and (max-width: 600px) {
-
-	.profileImg {
-		/* width: 50%; */
-	}
-}
-
 .contentAbout {
 	display: flex;
 	margin: 1em;
@@ -359,10 +352,6 @@ a {
 	.description {
 		width: 66%;
 
-	}
-
-	.description h2 {
-		
 	}
 }
 
@@ -451,10 +440,6 @@ a {
 	
 }
 
-.wheelgoPics {
-
-}
-
 @media only screen and (max-width: 600px) {
 
 	.project-unit {
@@ -522,9 +507,6 @@ a {
 	justify-content: space-around;
 } 
 
-.contact-img {
-	
-}
 
 @media only screen and (max-width: 600px) {
 	#contact {
