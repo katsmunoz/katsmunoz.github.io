@@ -1,0 +1,541 @@
+:root {
+	font-size: 17px;
+	font-family: 'Source Sans Pro', sans-serif;
+	--text-primary: #b6b6b6;
+	--text-secondary: #ececec;
+	--bg-primary: #23232e;
+	--bg-secondary: #141418;
+	--transition-speed: 600ms;
+  }
+  
+  body {
+	color: black;
+	background: rgb(235,232,233);
+	background: radial-gradient(circle, rgba(235,232,233,1) 0%, rgba(186,208,235,1) 100%);
+	margin: 0;
+	padding: 0;
+  }
+  
+  /* body::-webkit-scrollbar {
+	width: 0.25rem;
+  } */
+  
+  body::-webkit-scrollbar-track {
+	background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background: #6649b8;
+  }
+  
+  main {
+	margin-left: 5rem;
+	padding: 1rem;
+  }
+  
+  .navbar {
+	position: fixed;
+	background-color: var(--bg-primary);
+	transition: width 600ms ease;
+	z-index: 10;
+	/* overflow: scroll; */
+  }
+  
+  .navbar-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+  }
+  
+  .nav-item {
+	width: 100%;
+  }
+  
+  .nav-item:last-child {
+	margin-top: auto;
+  }
+  
+  .nav-link {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	color: var(--text-primary);
+	text-decoration: none;
+	filter: grayscale(100%) opacity(0.7);
+	transition: var(--transition-speed);
+  }
+  
+  .nav-link:hover {
+	filter: grayscale(0%) opacity(1);
+	background: var(--bg-secondary);
+	color: var(--text-secondary);
+  }
+  
+  .link-text {
+	display: none;
+	margin-left: 1rem;
+  }
+  
+  .nav-link svg, .navIcon {
+	width: 2rem;
+	min-width: 2rem;
+	margin: 0 1.5rem;
+  }
+  
+  .fa-primary {
+	color: rgb(63,94,251);
+
+  }
+  
+  .fa-secondary {
+	color: #8920df;
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+	transition: var(--transition-speed);
+  }
+  
+  .logo {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	text-align: center;
+	color: var(--text-secondary);
+	background: var(--bg-secondary);
+	font-size: 1.5rem;
+	letter-spacing: 0.3ch;
+	width: 100%;
+  }
+  
+  .logo svg {
+	transform: rotate(0deg);
+	transition: var(--transition-speed);
+  }
+  
+  .logo-text
+  {
+	display: inline;
+	position: absolute;
+	left: -999px;
+	transition: var(--transition-speed);
+  }
+  
+  .navbar:hover .logo svg {
+	transform: rotate(-180deg);
+  }
+  
+  /* Small screens */
+  @media only screen and (max-width: 600px) {
+	.navbar {
+	  bottom: 0;
+	  width: 100vw;
+	  height: 5rem;
+	}
+  
+	.logo {
+	  display: none;
+	}
+  
+	.navbar-nav {
+	  flex-direction: row;
+	}
+  
+	.nav-link {
+	  justify-content: center;
+	}
+  
+	main {
+	  margin: 0;
+	}
+  }
+  
+  /* Large screens */
+  @media only screen and (min-width: 600px) {
+	.navbar {
+	  top: 0;
+	  width: 5rem;
+	  height: 100vh;
+	}
+  
+	.navbar:hover {
+	  width: 13rem;
+	}
+  
+	.navbar:hover .link-text {
+	  display: inline;
+	}
+  
+	.navbar:hover .logo svg
+	{
+	  margin-left: 7rem;
+	}
+  
+	.navbar:hover .logo-text
+	{
+	  left: 0px;
+	}
+  }
+
+/* ========= HOME ========= */
+
+#home {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+
+
+/* ========= SECTION TITLES ========= */
+
+.alignTitle {
+	text-align: center;
+}
+
+.alignTitle h2 {
+	font-size: 60px;
+	letter-spacing: 1rem;
+	font-weight: 400;
+	margin: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.alignTitle h2 {
+		font-size: 30px;
+		letter-spacing: 0.5rem;
+	}
+
+}
+
+/* ========= DOWNLOAD CV BUTTON ========= */
+
+.download-btn {
+	display: flex;
+    justify-content: center;
+}
+
+@-webkit-keyframes stripe-slide {
+	0% {
+	  background-position: 0% 0;
+	}
+	100% {
+	  background-position: 100% 0;
+	}
+  }
+  @keyframes stripe-slide {
+	0% {
+	  background-position: 0% 0;
+	}
+	100% {
+	  background-position: 100% 0;
+	}
+  }
+  
+  .btn {
+	overflow: visible;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	line-height: normal;
+	cursor: pointer;
+	-moz-user-select: text;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 16px 36px 22px;
+	background-color: #fff;
+	color: #666;
+	border: 2px solid #666;
+	border-radius: 6px;
+	margin-top: 1em;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
+  }
+  .btn:-moz-focus-inner {
+	padding: 0;
+	border: 0;
+  }
+  .btn--stripe {
+	overflow: hidden;
+	position: relative;
+  }
+  .btn--stripe:after {
+	content: '';
+	display: block;
+	height: 7px;
+	width: 100%;
+	background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	border-top: 1px solid #666;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-size: 7px 7px;
+  }
+  .btn--stripe:hover {
+	background-color: #666;
+	color: #fff;
+	border-color: #000;
+  }
+  .btn--stripe:hover:after {
+	background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+	border-top: 1px solid #000;
+	-webkit-animation: stripe-slide 12s infinite linear forwards;
+			animation: stripe-slide 12s infinite linear forwards;
+  }
+  .btn--large {
+	width: 50%;
+  }
+  .btn--radius {
+	border-radius: 36px;
+  }
+
+  @media only screen and (max-width: 600px) {
+	  .btn {
+		  padding: 8px 18px 11px;
+	  }
+  }
+
+
+/* ========= ABOUT ME VIEW ========= */
+
+
+#about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#about {
+		justify-content: center;
+		margin: 0;
+	}
+	
+}
+
+.profileImg {
+	width: 300px;
+	height: 300px;
+	margin: 1em;
+	border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.profileImg {
+		/* width: 50%; */
+	}
+}
+
+.contentAbout {
+	display: flex;
+	margin: 1em;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	.contentAbout {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.description {
+	width: 500px;
+	background-color: #ececec;
+	box-shadow: rgba(0, 0, 0, 0.5);
+	padding: 3em;
+	text-align: center;
+	border: 2px solid;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.description {
+		width: 200px;
+
+	}
+}
+
+.buttonPage {
+	margin-top: 3em;
+}
+
+/* ========= HOBBIES ========= */
+
+#hobbies {
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+	margin: 1em;
+	flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+	#hobbies img {
+		width: 100px;
+		height: 150px;
+	}
+}
+
+/* ========= SKILLS ========= */
+
+#skills {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.icons-skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.icons-skills img {
+	margin: 2em;
+	width: 131px;
+	height: 130px;
+}
+
+.iconsRow {
+	display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.icons-skills img {
+		margin: 0.5em;
+		width: 50px;
+		height: 50px;
+	}
+
+}
+
+/* ========= PROJECTS ========= */
+
+#projects {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.project-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.project-unit {
+	display: flex;
+	flex-direction: column;
+    width: 50%;
+	margin: 2em;
+	
+}
+
+.project-img {
+	display: flex;
+	justify-content: center;
+	
+}
+
+.wheelgoPics {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	.project-unit {
+		width: 300px;
+	}
+
+	.project-img img{
+		width: 60%;
+	}
+
+	.wheelgoPics {
+		display: flex;
+		justify-content: center;
+		height: 230px;
+		width: 200px;
+	}
+	
+
+	}
+
+.datacel-Style {
+	margin: 3em;
+}
+
+.wheelgo-img {
+	margin-bottom: 2em;
+}
+
+.project-description {
+	text-align: center;
+	padding: 1em;
+	background-color: #ececec;
+	border: 2px solid;	
+}
+
+.project-description h2 {
+	letter-spacing: 3px;
+}
+
+.projects-btns {
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+}
+
+/* ========= CONTACT ========= */
+
+#contact {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 6rem;
+}
+
+.imageContact {
+	display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.iconsContact {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	justify-content: space-around;
+} 
+
+.contact-img {
+	
+}
+
+@media only screen and (max-width: 600px) {
+	#contact {
+		margin-bottom: 6rem;
+	}
+
+	.iconsContact img {
+		width: 65px;
+		height: 65px;
+	}
+}
