@@ -16,10 +16,6 @@
 	padding: 0;
   }
   
-  /* body::-webkit-scrollbar {
-	width: 0.25rem;
-  } */
-  
   body::-webkit-scrollbar-track {
 	background: #1e1e24;
   }
@@ -38,7 +34,6 @@
 	background-color: var(--bg-primary);
 	transition: width 600ms ease;
 	z-index: 10;
-	/* overflow: scroll; */
   }
   
   .navbar-nav {
@@ -201,7 +196,7 @@ a {
 @media only screen and (max-width: 600px) {
 
 	.alignTitle h2 {
-		font-size: 30px;
+		font-size: 25px;
 		letter-spacing: 0.5rem;
 	}
 
@@ -309,15 +304,6 @@ a {
 	align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
-
-	#about {
-		justify-content: center;
-		margin: 0;
-	}
-	
-}
-
 .profileImg {
 	width: 300px;
 	height: 300px;
@@ -331,6 +317,17 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
+
+	#about {
+		justify-content: center;
+		margin: 0;
+	}
+
+	.profileImg {
+		width: 200px;
+		height: 200px;
+		margin: 1em;
+	}
 
 	.contentAbout {
 		flex-wrap: wrap;
@@ -351,7 +348,6 @@ a {
 
 	.description {
 		width: 66%;
-
 	}
 }
 
