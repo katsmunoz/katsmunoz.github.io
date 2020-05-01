@@ -87,12 +87,12 @@
   }
   
   .fa-primary {
-	color: rgb(63,94,251);
+	color: rgb(241, 190, 253);
 
   }
   
   .fa-secondary {
-	color: #8920df;
+	color: rgba(186,208,235,1);
   }
   
   .fa-primary,
