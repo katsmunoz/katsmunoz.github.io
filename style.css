@@ -475,6 +475,10 @@ a {
 	letter-spacing: 3px;
 }
 
+.project-description h3 {
+	letter-spacing: 3px;
+}
+
 .projects-btns {
 	display: flex;
 	justify-content: center;
